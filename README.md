@@ -1,2 +1,3 @@
 # assignment_frontend
-# assignment_frontend
+The aws acm cetificate takes so long to to create.
+The deployment is still in progress. When it finishs, I will put the link in readme.
