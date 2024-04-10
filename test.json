@@ -1,0 +1,34 @@
+{
+    "message": "All posts",
+    "posts": [
+      {
+        "_id": "6614c06f4af8f8af6dcfae6d",
+        "userId": "6614c06219dfb68324b3c0f9",
+        "imageUrl": "http://res.cloudinary.com/dg3fsapzu/image/upload/v1712636013/social/oznqzi3izwch9bio0iif.jpg",
+        "commentsCount": 2,
+        "createdAt": "2024-04-09T04:13:35.213Z",
+        "__v": 0,
+        "comments": [
+          {
+            "_id": "6614c0dd66e1204180dab92a",
+            "postId": "6614c06f4af8f8af6dcfae6d",
+            "userId": "6614c08719dfb68324b3f645",
+            "comment": "comment on second post",
+            "createdAt": "2024-04-09T04:15:25.389Z",
+            "__v": 0
+          },
+          {
+            "_id": "6614c12766e1204180dab930",
+            "postId": "6614c06f4af8f8af6dcfae6d",
+            "userId": "6614c06219dfb68324b3c0f9",
+            "comment": "comment from quan0401",
+            "createdAt": "2024-04-09T04:16:39.389Z",
+            "__v": 0
+          }
+        ]
+        
+      }
+    ]
+    
+  }
+  
