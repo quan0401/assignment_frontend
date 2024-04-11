@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import Link from "next/link";
 require("dotenv").config();
-let HOST_URL = "http://13.230.147.6:5001/api/v1/post";
+let HOST_URL = "http://13.230.147.6:5000/api/v1/post";
 if (process.env.NODE_ENV === "development") {
   HOST_URL = "http://localhost:3000";
 }
@@ -27,7 +27,7 @@ const ImageUploadForm = () => {
 
       try {
         const response = await axios.post(
-          `http://13.230.147.6:5001/api/v1/post`,
+          `http://43.207.140.109:5000/api/v1/post`,
           {
             image: imageData,
           }
