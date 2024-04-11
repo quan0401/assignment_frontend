@@ -17,6 +17,7 @@ const ImageList = () => {
   };
 
   const handleSubmit = async (e) => {
+    if (!image) return;
     e.preventDefault();
 
     const reader = new FileReader();

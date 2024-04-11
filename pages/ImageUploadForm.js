@@ -18,6 +18,7 @@ const ImageUploadForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!image) return;
 
     const reader = new FileReader();
     reader.readAsDataURL(image);
