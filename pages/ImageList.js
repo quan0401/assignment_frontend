@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
 require("dotenv").config();
-let HOST_URL = "http://52.197.202.75:5000";
+let HOST_URL = "http://13.114.136.215:5000";
 if (process.env.NODE_ENV === "development") {
   HOST_URL = "http://localhost:3000";
 }
@@ -27,7 +27,7 @@ const ImageList = () => {
 
       try {
         const response = await axios.post(
-          `http://52.197.202.75:5000/api/v1/post`,
+          `http://13.114.136.215:5000/api/v1/post`,
           {
             image: imageData,
           }
@@ -51,7 +51,9 @@ const ImageList = () => {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get(`http://52.197.202.75:5000/api/v1/post`);
+      const response = await axios.get(
+        `http://13.114.136.215:5000/api/v1/post`
+      );
       setImages(response.data.posts);
       // setImages(test.posts)
     } catch (error) {
@@ -71,7 +73,7 @@ const ImageList = () => {
     if (newComment) {
       try {
         const response = await axios.post(
-          `http://52.197.202.75:5000/api/v1/comment`,
+          `http://13.114.136.215:5000/api/v1/comment`,
           {
             username: "username", // Replace with the actual username
             postId: newImages[index]._id, // Assuming postId is stored in _id field of the image object

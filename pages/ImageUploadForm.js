@@ -27,7 +27,7 @@ const ImageUploadForm = () => {
 
       try {
         const response = await axios.post(
-          `http://52.197.202.75:5000/api/v1/post`,
+          `http://13.114.136.215:5000/api/v1/post`,
           {
             image: imageData,
           }
