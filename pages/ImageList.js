@@ -117,6 +117,7 @@ const ImageList = () => {
           <div style={{ display: "flex", justifyContent: "space-between" }}>
             <button
               type="submit"
+              disabled={!image}
               style={{
                 backgroundColor: image ? "#007bff" : "none",
                 color: !image ? "#666" : "#fff",
