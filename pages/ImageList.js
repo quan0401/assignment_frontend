@@ -118,8 +118,8 @@ const ImageList = () => {
             <button
               type="submit"
               style={{
-                backgroundColor: "#007bff",
-                color: "#fff",
+                backgroundColor: image ? "#007bff" : "none",
+                color: !image ? "#666" : "#fff",
                 padding: "10px 20px",
                 border: "none",
                 borderRadius: "5px",
@@ -147,7 +147,7 @@ const ImageList = () => {
                 style={{
                   padding: "10px 20px",
                   borderRadius: "5px",
-                  backgroundColor: "lightpink",
+                  backgroundColor: "#28a745",
                   color: "white",
                   border: "none",
                   cursor: "pointer",

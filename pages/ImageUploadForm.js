@@ -65,7 +65,6 @@ const ImageUploadForm = () => {
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           <button
             type="submit"
-            disabled={!image}
             style={{
               backgroundColor: image ? "#007bff" : "none",
               color: !image ? "#666" : "#fff",
@@ -96,7 +95,7 @@ const ImageUploadForm = () => {
               style={{
                 padding: "10px 20px",
                 borderRadius: "5px",
-                backgroundColor: "lightpink",
+                backgroundColor: "#28a745",
                 color: "white",
                 border: "none",
                 cursor: "pointer",
