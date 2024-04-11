@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+require("dotenv").config();
 
 const Home = () => {
   return (

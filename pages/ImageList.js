@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Link from "next/link";
+require("dotenv").config();
+let HOST_URL = "http://13.230.147.6:5001";
+if (process.env.NODE_ENV === "development") {
+  HOST_URL = "http://localhost:3000";
+}
 
 const ImageList = () => {
   const [image, setImage] = useState(null);
@@ -21,7 +26,7 @@ const ImageList = () => {
 
       try {
         const response = await axios.post(
-          "https://api.dev.socialappserver.online/api/v1/post",
+          `http://13.230.147.6:5001/api/v1/post`,
           {
             image: imageData,
           }
@@ -39,16 +44,13 @@ const ImageList = () => {
     };
   };
   const [images, setImages] = useState([]);
-
   useEffect(() => {
     fetchImages();
   }, []);
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get(
-        "https://api.dev.socialappserver.online/api/v1/post"
-      );
+      const response = await axios.get(`http://13.230.147.6:5001/api/v1/post`);
       setImages(response.data.posts);
       // setImages(test.posts)
     } catch (error) {
@@ -68,7 +70,7 @@ const ImageList = () => {
     if (newComment) {
       try {
         const response = await axios.post(
-          "https://api.dev.socialappserver.online/api/v1/comment",
+          `http://13.230.147.6:5001/api/v1/comment`,
           {
             username: "username", // Replace with the actual username
             postId: newImages[index]._id, // Assuming postId is stored in _id field of the image object
